@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="COM.RBNELITE.ENTITY.FriendshipDao" table="tbl_friends_data">
+      <id column="Friend_Id" name="Id">
+          <generator class="increment"/>
+      </id>
+      <property column="Who_Frd" name="who_frd"/>
+      <property column="Whom_Frd" name="whom_frd"/>
+      <property column="Date" name="date"/>
+  </class>
+</hibernate-mapping>

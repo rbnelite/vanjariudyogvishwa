@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="COM.RBNELITE.ENTITY.SolutionDao" table="tbl_need_solution">
+      <id column="sol_id" name="solution_id">
+          <generator class="increment"/>
+          </id>
+          <property column="need_id" name="need_id"/>
+          <property column="solution" name="solution"/>
+          <property column="user_mail" name="user_mail"/>
+  </class>
+</hibernate-mapping>

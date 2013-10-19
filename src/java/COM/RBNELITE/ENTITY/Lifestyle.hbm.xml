@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="COM.RBNELITE.ENTITY.LifestyleDao" table="tbl_lifestyle">
+      <id column="l_id" name="id">
+          <generator class="increment"/>
+      </id>
+      <property column="diet" name="diet"/>
+      <property column="smoke" name="smoke"/>
+      <property column="drink" name="drink"/>
+      <property column="complexion" name="complexion"/>
+      <property column="body_type" name="body_type"/>
+      <property column="blood_grp" name="bld_grp"/>
+      <property column="weight" name="weight"/>
+      <property column="user_mail" name="user_mail"/>
+  </class>
+</hibernate-mapping>

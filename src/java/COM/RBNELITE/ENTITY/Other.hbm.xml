@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="COM.RBNELITE.ENTITY.OtherDao" table="tbl_other">
+    <id column="o_id" name="Id">
+      <generator class="increment"/>
+    </id>
+    <property column="soc_status" name="social_stat"/>
+    <property column="poly_status" name="poly_stat"/>
+    <property column="social_act" name="social_act"/>
+    <property column="poly_act" name="poly_act"/>
+    <property column="cultural_act" name="cultural_act"/>
+    <property column="games" name="games"/>
+    <property column="user_mail" name="user_mail"/>
+  </class>
+</hibernate-mapping>
