@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="COM.RBNELITE.ENTITY.HobbiesDao" table="tbl_hobbies">
+       <id column="h_id" name="Id">
+      <generator class="increment"/>
+  </id>
+  <property column="hobbies" name="hobbies"/>
+   <property column="music" name="music"/>
+    <property column="books" name="books"/>
+     <property column="dress_style" name="dress"/>
+      <property column="tv_shows" name="tv"/>
+       <property column="pref_movies" name="pref_movies"/>
+        <property column="fav_movies" name="fav_movies"/>
+         <property column="sports" name="sports"/>
+          
+          <property column="food" name="food"/> 
+          <property column="vacation" name="vacation"/>
+          <property column="user_mail" name="user_mail"/>
+  </class>
+</hibernate-mapping>

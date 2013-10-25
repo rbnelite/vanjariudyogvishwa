@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="COM.RBNELITE.ENTITY.NotificationDao" table="tbl_notifications">
+      <id column="notification_Id" name="notification_id">
+          <generator class="increment"/>
+      </id>
+      <property column="notification" name="notification"/>
+      <property column="date_time" name="date_time"/>
+      <property column="user_mail" name="user_mail"/>
+  </class>
+</hibernate-mapping>

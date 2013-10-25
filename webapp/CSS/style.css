@@ -1,0 +1,330 @@
+/* 
+    Document   : style
+    Created on : Jul 26, 2013, 12:40:34 PM
+    Author     : RBNElite
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+body{
+    font-family: Verdana;
+    font-size: 14px;
+    background-color: menu;
+}
+
+#main{
+      height: auto;
+      max-width: 1200px;
+     
+   
+   }
+#logo
+{
+   background-color: red;
+   width: 100px;
+   height: 40px;
+   margin-left: 70px;
+   
+}
+#Cover{
+    height:200px;
+    margin-left: 50px;
+    border-radius: 5px;
+    width: 1170px;
+    background-image: url(../images/banner1.jpg);
+    border: 1px solid #a0a0a0;
+}
+
+#profileImage
+{
+    height:150px;
+    float: left;
+    border-radius: 5px;
+    width: 100px;
+    margin-left: 1045px;
+    margin-top: -185px;
+   
+}
+
+#share
+{
+  height: 100px;
+  width: 420px;
+
+  background-color:bisque;
+  border: 1px solid gray; 
+ 
+  
+}
+.img{
+    height: 50px;
+    width: 45px;
+    border: 1px solid black;
+}
+
+#GroupDetails
+{
+  height: 195px;
+  width: 350px;
+  background-color: bisque;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 50px
+}
+
+.showGroups
+{
+    margin-top: 2px;
+    width:100%;
+    height: auto;
+    
+}
+
+#ProductDetails
+{
+  height: 195px;
+  width: 370px;
+  margin-top: -196px;
+  background-color: bisque;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-left: 410px;
+}
+
+#profileInfo
+{
+  height: auto;
+  width: 730px;
+  margin-left: 50px;
+  margin-top: 10px;
+  background-color: bisque;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+#friends
+{
+   height: auto;
+   width: 420px;
+   background-color: bisque;
+   border: 1px solid gray;
+   border-radius: 5px;
+   margin-top: 10px;
+  
+  }
+#friends2
+{
+   height: auto;
+   width: 420px;
+   background-color: bisque;
+   border: 1px solid gray;
+   border-radius: 5px;
+   margin-top: 10px;
+}
+#profile_header
+{
+   height: 40px;
+   width: 730px;
+   background-color: #fab039;
+   border: 1px solid gray;
+   margin-top: 10px;
+   margin-left: 50px;
+}
+#leftSide{
+    width: 800px;
+    height: auto;
+    float: left;
+    
+       }
+#rightSide{
+    width: 450px;
+    height: auto;
+    margin-left: 810px;
+    margin-top: 10px;
+   
+   }
+   
+#popup{
+     height: 200px;
+     width: 300px;
+     background-color: red;
+   }
+   
+   .button{
+       cursor: pointer;
+       height: 30px;
+       width: 30px;
+       float: right;
+       margin-right: 25px;
+       margin-top: 2px;
+   }
+#event
+{
+    float:left;
+    width:1000px;
+    height:auto;
+    margin-top: 230px;
+    margin-left: 5px;
+    
+}
+#Upcoming_event
+{
+    float:left;
+    width:910px;
+    height:auto;
+    border-radius: 5px;
+    margin-top: 10px;
+   }
+#backgroundclr
+{
+    background-color: bisque;
+    width: 1000px;
+    height: auto;
+    
+}
+#group_menubar
+{
+    height: 50px;
+    width: 925px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color:antiquewhite;
+    border: 1px solid;
+    margin-top: 10px;
+    border-radius: 5px; 
+}
+#Group_right
+{
+    background-color:white;
+    width:448px;
+    margin-left: 910px;
+    height:auto;
+    margin-top: 230px;
+    position: fixed;
+}
+#Group_msg
+{
+    margin-top: 10px;
+    height:auto;
+    width: 417px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: antiquewhite
+  
+}
+#group_ver
+{
+  background-color: antiquewhite;
+  width:90px;
+  height: 500px;
+  margin-top:10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+#Reg_head
+{
+    width:100%;
+    height: 50px;
+    background-color: fab039;
+    margin-left: 50px;
+    margin-top: 10px;
+    padding-right: 180px;
+}
+#reg
+{
+    height: 700px;
+    width: 400px;
+    background-color: activeborder;
+    margin-left: 1030px;
+    margin-top: 10px;
+}
+#log_foot
+{
+    width:100%;
+    height: 400px;
+    background-color: activeborder;
+    margin-left: 50px;
+    margin-top: 10px;
+    padding-right: 180px;
+    
+}
+
+#foo{
+    background-color: transparent;
+}
+
+#foo :hover
+{
+    background-image: url(../images/searchlogo.png);
+}
+
+#reg_log{
+    height: 50px;
+    width:500px;
+    position: absolute;
+    margin-left: 900px;  
+   
+}
+#comment
+{
+     height: 50px;
+     margin-left: 50px;
+     margin-top: 10px;
+     background-color:#fcca7b;
+}
+.myinfo
+{
+   height: auto;
+   width: auto;
+   margin-right: 210px;
+   margin-top:115px;
+   float: right;
+ 
+}
+#group_right
+{
+    position:fixed;  
+    background-color:#E6E6FA;
+    width:280px;
+    margin-left: 950px;
+    height:800px;
+    margin-top: 230px;
+    border-radius: 5px;
+   
+}
+#prf_state
+{
+    width: 60px;
+    height: auto;
+   margin-left: 65px;
+   margin-top: -50px;
+}
+#prf_details
+
+{
+    width: 350px;
+    height: 60px;
+    margin-top: 15px;
+    margin-left: 55px;
+}
+
+#logo1
+{
+	width:141px;
+	height:143px;
+	margin-left: -1000px;
+        margin-bottom: -135px;
+        
+}
+
+#solutionarea
+{
+    width:auto;
+   height: auto;
+   margin-left: 15px;
+   margin-top: -30px;
+}

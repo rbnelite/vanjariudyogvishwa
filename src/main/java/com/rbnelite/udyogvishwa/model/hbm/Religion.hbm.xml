@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="COM.RBNELITE.ENTITY.ReligionDao" table="tbl_religion">
+       <id column="r_id" name="id">
+      <generator class="increment"/>
+    </id>
+    <property column="religion" name="religion"/>
+    <property column="cast" name="cast"/>
+    <property column="mother_toung" name="mthr_tng"/>
+    <property column="native_place" name="native_place"/>
+    <property column="user_mail" name="user_mail"/>
+  </class>
+</hibernate-mapping>

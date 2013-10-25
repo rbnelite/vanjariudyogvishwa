@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="COM.RBNELITE.ENTITY.ContactDao" table="tbl_contact">
+       <id column="c_id" name="id">
+      <generator class="increment"/>
+    </id>
+    <property column="home_addr" name="home_addr"/>
+    <property column="off_addr" name="off_addr"/>
+    <property column="telephone" name="telephone"/>
+    <property column="user_mail" name="uid"/>
+  </class>
+</hibernate-mapping>

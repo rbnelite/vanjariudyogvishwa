@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="COM.RBNELITE.ENTITY.CreateEventDao" table="tbl_event">
+    <id column="event_id" name="Id">
+      <generator class="increment"/>
+    </id>
+    <property column="name" name="name"/>
+    <property column="details" name="details"/>
+    <property column="location" name="location"/>
+    <property column="data_time" name="date_time"/>
+    <property column="user_mail" name="user_mail"/>
+  </class>
+</hibernate-mapping>

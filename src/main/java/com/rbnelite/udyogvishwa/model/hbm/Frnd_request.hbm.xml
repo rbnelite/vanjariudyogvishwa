@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="COM.RBNELITE.ENTITY.Frnd_requestDao" table="tbl_frd_request">
+      <id column="Req_Id" name="frnd_req_id">
+          <generator class="increment"/>
+      </id>
+      <property column="From_Id" name="req_from"/>
+       <property column="To_Id" name="req_to"/>
+        <property column="Status" name="req_status"/>
+         <property column="Date" name="req_date"/>
+  </class>
+</hibernate-mapping>

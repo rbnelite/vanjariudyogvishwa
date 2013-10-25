@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="COM.RBNELITE.ENTITY.StatusUpdateDao" table="tbl_status">
+      <id column="status_id" name="Id">
+          <generator class="increment"/>
+      </id>
+      <property column="post" name="status_details"/>
+      <property column="post_date" name="status_date"/>
+      <property column="user_email" name="user_email"/>
+  </class>
+  
+</hibernate-mapping>

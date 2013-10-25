@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="COM.RBNELITE.ENTITY.UnlikeButtonDao" table="tbl_unlike">
+      <id column="unlike_id" name="unlike_id">
+          <generator class="increment"/>
+      </id>
+      <property column="count" name="count"/>
+      <property column="names" name="names"/>
+      <property column="status_id" name="Status_id"/>
+  </class>
+</hibernate-mapping>

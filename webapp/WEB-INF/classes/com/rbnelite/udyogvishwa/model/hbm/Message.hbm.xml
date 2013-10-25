@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="COM.RBNELITE.ENTITY.MessageDao" table="tbl_message">
+      <id column="MessageID" name="Id">
+          <generator class="increment"/>
+      </id>
+      <property column="SenderID" name="sender" />
+      <property column="ReceiverId" name="Tomsg"/>
+      <property column="MessageDate" name="MsgDate"/>
+      <property column="Message" name="Message"/>
+      <property column="SenderFlag" name="sen_flg"/>
+      <property column="ReceiverFlag" name="res_flg"/>
+          </class>
+</hibernate-mapping>
