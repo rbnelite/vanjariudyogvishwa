@@ -8,7 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.rbnelite.udyogvishwa.dao.CreateEventDao;
+import com.rbnelite.udyogvishwa.model.CreateEvent;
 
 public class EventSer {
 	public static List getEvent() {
@@ -26,7 +26,7 @@ public class EventSer {
 				.createQuery("from CreateEventDao order by date_time");
 		allUsers = queryResult.list();
 		for (int i = 0; i < allUsers.size(); i++) {
-			CreateEventDao event = (CreateEventDao) allUsers.get(i);
+			CreateEvent event = (CreateEvent) allUsers.get(i);
 			e_name = event.getName();
 			e_date = event.getDate_time();
 			e_details = event.getDetails();

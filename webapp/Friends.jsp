@@ -3,14 +3,14 @@
     Created on : Jul 26, 2013, 12:37:46 PM
     Author     : RBNElite
 --%>
-<%@page import="com.rbnelite.udyogvishwa.dao.RegistrationDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.RegistrationDao"%>
 <%@page import="com.rbnelite.udyogvishwa.service.LoginSer"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="com.rbnelite.udyogvishwa.service.ProfileImage"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.LoginDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.ProfileImageDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.LoginDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.ProfileImageDao"%>
 <%@page import="com.rbnelite.udyogvishwa.service.HomeSer"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.FriendshipDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.Friendship"%>
 <%@page import="java.util.List"%>
 <%@page import="org.hibernate.Query"%>
 <%@page import="org.hibernate.Session"%>
@@ -196,7 +196,7 @@ function ShowINeedPage(){
              
                for (int i = 0; i < allUsers1.size(); i++)
                {  
-               FriendshipDao frnd_pht = (FriendshipDao) allUsers1.get(i);        
+               Friendship frnd_pht = (Friendship) allUsers1.get(i);        
                frnd=frnd_pht.getWho_frd();
                Query queryResult131 = s13.createQuery("from RegistrationDao where email_id='"+frnd+"'");  
                allUsers1 = queryResult131.list();

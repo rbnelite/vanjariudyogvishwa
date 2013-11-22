@@ -9,7 +9,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.rbnelite.udyogvishwa.dao.Intrest_areasDao;
+import com.rbnelite.udyogvishwa.model.Intrest_areasDao;
 
 public class GroupSer {
 

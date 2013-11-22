@@ -6,10 +6,10 @@
 <%@page import="com.rbnelite.udyogvishwa.service.LoginSer"%>
 <%@page import="com.rbnelite.udyogvishwa.service.ProfileImage"%>
 <%@page import="com.rbnelite.udyogvishwa.service.HomeSer"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.LoginDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.ProfileImageDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.LoginDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.ProfileImageDao"%>
 <%@page import="java.util.Iterator"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.ProductDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.ProductDao"%>
 <%@page import="org.hibernate.Query"%>
 <%@page import="java.util.List"%>
 <%@page import="org.hibernate.Session"%>

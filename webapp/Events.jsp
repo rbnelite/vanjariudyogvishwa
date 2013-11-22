@@ -6,11 +6,11 @@
 <%@page import="com.rbnelite.udyogvishwa.service.LoginSer"%>
 <%@page import="com.rbnelite.udyogvishwa.service.ProfileImage"%>
 <%@page import="com.rbnelite.udyogvishwa.service.HomeSer"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.ProfileImageDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.LoginDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.ProfileImageDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.LoginDao"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="com.rbnelite.udyogvishwa.service.EventSer"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.CreateEventDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.CreateEvent"%>
 <%@page import="java.util.Calendar"%>
 <%@page import="java.util.List"%>
 <%@page import="org.hibernate.Query"%>
@@ -133,7 +133,7 @@ function ShowINeedPage(){
   int frnd_count=home.getFriendRequestcnt(user_mail);
                    
 %>
-            <a href="Friend_request.jsp" style="text-decoration: none" onclick="return hs.htmlExpand(this, { objectType: 'ajax'} )"><font color="white"size="3"> Request's</font>&nbsp;<font color="black" style="background-color: bisque"><%=frnd_count%></font></a>
+            <a href="Friend_request.jsp" style="text-decoration: none" onclick="hs.htmlExpand(this, { objectType: 'ajax'} )"><font color="white"size="3"> Request's</font>&nbsp;<font color="black" style="background-color: bisque"><%=frnd_count%></font></a>
                     </td>
                          
                         <td>
@@ -232,7 +232,7 @@ modalWin.ShowMessage(msg,200,400,'User Information',null,null);
         allUsers11 = queryResult11.list();
         for (int i = 0; i < allUsers11.size(); i++)
         {  
-        CreateEventDao event = (CreateEventDao) allUsers11.get(i);        
+        CreateEvent event = (CreateEvent) allUsers11.get(i);        
         e_name=event.getName();
         e_date=event.getDate_time();
         e_details=event.getDetails();

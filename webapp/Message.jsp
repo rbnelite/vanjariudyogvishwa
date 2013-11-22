@@ -2,11 +2,11 @@
 <%@page import="com.rbnelite.udyogvishwa.service.MessageSer"%>
 <%@page import="com.rbnelite.udyogvishwa.service.ProfileImage"%>
 <%@page import="java.util.Iterator"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.LoginDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.ProfileImageDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.LoginDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.ProfileImageDao"%>
 <%@page import="com.rbnelite.udyogvishwa.service.HomeSer"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.RegistrationDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.MessageDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.RegistrationDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.MessageDao"%>
 <%@page import="org.hibernate.SQLQuery"%>
 <%@page import="java.util.Calendar"%>
 <%@page import="org.hibernate.Query"%>

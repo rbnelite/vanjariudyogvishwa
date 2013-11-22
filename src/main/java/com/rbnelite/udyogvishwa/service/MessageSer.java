@@ -9,8 +9,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.rbnelite.udyogvishwa.dao.MessageDao;
-import com.rbnelite.udyogvishwa.dao.RegistrationDao;
+import com.rbnelite.udyogvishwa.model.MessageDao;
+import com.rbnelite.udyogvishwa.model.RegistrationDao;
 
 public class MessageSer
 {

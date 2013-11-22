@@ -1,4 +1,4 @@
-<%@page import="com.rbnelite.udyogvishwa.dao.HobbiesDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.HobbiesDao"%>
 <%@page import="java.util.List"%>
 <%@page import="org.hibernate.Query"%>
 <%@page import="org.hibernate.Session"%>

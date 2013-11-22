@@ -18,27 +18,27 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.rbnelite.udyogvishwa.dao.AstroDao;
-import com.rbnelite.udyogvishwa.dao.CommentDao;
-import com.rbnelite.udyogvishwa.dao.ContactDao;
-import com.rbnelite.udyogvishwa.dao.CreateEventDao;
-import com.rbnelite.udyogvishwa.dao.EducationDao;
-import com.rbnelite.udyogvishwa.dao.FamilyDao;
-import com.rbnelite.udyogvishwa.dao.FriendshipDao;
-import com.rbnelite.udyogvishwa.dao.Frnd_requestDao;
-import com.rbnelite.udyogvishwa.dao.HobbiesDao;
-import com.rbnelite.udyogvishwa.dao.I_needDao;
-import com.rbnelite.udyogvishwa.dao.LifestyleDao;
-import com.rbnelite.udyogvishwa.dao.LikeButtonDao;
-import com.rbnelite.udyogvishwa.dao.LoginDao;
-import com.rbnelite.udyogvishwa.dao.NotificationDao;
-import com.rbnelite.udyogvishwa.dao.OccupationDao;
-import com.rbnelite.udyogvishwa.dao.OtherDao;
-import com.rbnelite.udyogvishwa.dao.ProductDao;
-import com.rbnelite.udyogvishwa.dao.RegistrationDao;
-import com.rbnelite.udyogvishwa.dao.ReligionDao;
-import com.rbnelite.udyogvishwa.dao.StatusUpdateDao;
-import com.rbnelite.udyogvishwa.dao.UnlikeButtonDao;
+import com.rbnelite.udyogvishwa.model.Astro;
+import com.rbnelite.udyogvishwa.model.Comment;
+import com.rbnelite.udyogvishwa.model.Contact;
+import com.rbnelite.udyogvishwa.model.CreateEvent;
+import com.rbnelite.udyogvishwa.model.Education;
+import com.rbnelite.udyogvishwa.model.Family;
+import com.rbnelite.udyogvishwa.model.Friendship;
+import com.rbnelite.udyogvishwa.model.FrndRequest;
+import com.rbnelite.udyogvishwa.model.HobbiesDao;
+import com.rbnelite.udyogvishwa.model.I_needDao;
+import com.rbnelite.udyogvishwa.model.LifestyleDao;
+import com.rbnelite.udyogvishwa.model.LikeButtonDao;
+import com.rbnelite.udyogvishwa.model.LoginDao;
+import com.rbnelite.udyogvishwa.model.NotificationDao;
+import com.rbnelite.udyogvishwa.model.OccupationDao;
+import com.rbnelite.udyogvishwa.model.OtherDao;
+import com.rbnelite.udyogvishwa.model.ProductDao;
+import com.rbnelite.udyogvishwa.model.RegistrationDao;
+import com.rbnelite.udyogvishwa.model.ReligionDao;
+import com.rbnelite.udyogvishwa.model.StatusUpdateDao;
+import com.rbnelite.udyogvishwa.model.UnlikeButtonDao;
 import com.rbnelite.udyogvishwa.service.FriendRequest_Impl;
 import com.rbnelite.udyogvishwa.service.GroupSer;
 import com.rbnelite.udyogvishwa.service.LoginImpl;
@@ -576,7 +576,7 @@ public class ActionController extends HttpServlet {
 
                 Session s = sf.openSession();
 
-                EducationDao edu = new EducationDao();
+                Education edu = new Education();
 
                 edu.setSchool(school);
                 edu.setClg(clg);
@@ -613,11 +613,11 @@ public class ActionController extends HttpServlet {
             try {
                 SessionFactory sf = new Configuration().configure().buildSessionFactory();
                 Session s = sf.openSession();
-                AstroDao as = new AstroDao();
+                Astro as = new Astro();
                 as.setCountry(country);
                 as.setCity(city);
                 as.setZodiac(zodiac);
-                as.setUser_mail(uid);
+                //as.setUser_mail(uid);
                 s.beginTransaction();
                 s.save(as);
                 s.getTransaction().commit();
@@ -643,7 +643,7 @@ public class ActionController extends HttpServlet {
 
                 SessionFactory sf = new Configuration().configure().buildSessionFactory();
                 Session s = sf.openSession();
-                ContactDao r2 = new ContactDao();
+                Contact r2 = new Contact();
                 r2.setHome_addr(home_addr);
                 r2.setOff_addr(off_addr);
                 r2.setTelephone(telephone);
@@ -669,7 +669,7 @@ public class ActionController extends HttpServlet {
 
                 SessionFactory sf = new Configuration().configure().buildSessionFactory();
                 Session s = sf.openSession();
-                FamilyDao f = new FamilyDao();
+                Family f = new Family();
                 f.setFam_values(fam_values);
                 f.setFam_type(fam_type);
                 f.setFam_status(fam_status);
@@ -764,7 +764,7 @@ public class ActionController extends HttpServlet {
                 allUsers = queryResult.list();
                 System.out.println("# of rows: " + allUsers.size());
                 for (int i = 0; i < allUsers.size(); i++) {
-                    EducationDao user = (EducationDao) allUsers.get(i);
+                    Education user = (Education) allUsers.get(i);
                     System.out.println(user);
                     user.setSchool(school);
                     user.setClg(clg);
@@ -842,7 +842,7 @@ public class ActionController extends HttpServlet {
                 Query queryResult = s.createQuery("from ContactDao where user_mail='" + uid + "'");
                 allUsers = queryResult.list();
                 for (int i = 0; i < allUsers.size(); i++) {
-                    ContactDao con = (ContactDao) allUsers.get(i);
+                    Contact con = (Contact) allUsers.get(i);
                     con.setHome_addr(home_addr);
                     con.setOff_addr(off_addr);
                     con.setTelephone(telephone);
@@ -873,7 +873,7 @@ public class ActionController extends HttpServlet {
                 Query queryResult = s.createQuery("from FamilyDao where user_mail='" + uid + "'");
                 allUsers = queryResult.list();
                 for (int i = 0; i < allUsers.size(); i++) {
-                    FamilyDao fam = (FamilyDao) allUsers.get(i);
+                    Family fam = (Family) allUsers.get(i);
                     fam.setFam_values(fmly_values);
                     fam.setFam_type(fmly_type);
                     fam.setFam_status(fmly_status);
@@ -905,7 +905,7 @@ public class ActionController extends HttpServlet {
                 Query queryResult = s.createQuery("from AstroDao where user_mail='" + uid + "'");
                 allUsers = queryResult.list();
                 for (int i = 0; i < allUsers.size(); i++) {
-                    AstroDao astro = (AstroDao) allUsers.get(i);
+                    Astro astro = (Astro) allUsers.get(i);
                     astro.setCountry(a_country);
                     astro.setCity(a_city);
                     astro.setZodiac(a_zodiac);
@@ -1056,7 +1056,7 @@ public class ActionController extends HttpServlet {
 
                 Session s = sf.openSession();
 
-                CreateEventDao ce = new CreateEventDao();
+                CreateEvent ce = new CreateEvent();
                 ce.setName(event_name);
                 ce.setDetails(event_details);
                 ce.setLocation(event_location);
@@ -1127,7 +1127,7 @@ public class ActionController extends HttpServlet {
             try {
                 SessionFactory sf = new Configuration().configure().buildSessionFactory();
                 Session s = sf.openSession();
-                FriendshipDao r1 = new FriendshipDao();
+                Friendship r1 = new Friendship();
                 r1.setDate(date);
                 r1.setWho_frd(to);
                 r1.setWhom_frd(uid);
@@ -1160,7 +1160,7 @@ public class ActionController extends HttpServlet {
                 Query queryResult = s.createQuery("from Frnd_requestDao where req_to='" + to + "' and req_from='" + uid + "'");
                 allUsers = queryResult.list();
                 for (int i = 0; i < allUsers.size(); i++) {
-                    Frnd_requestDao rel = (Frnd_requestDao) allUsers.get(i);
+                    FrndRequest rel = (FrndRequest) allUsers.get(i);
                     rel.setReq_status(Status);
                     s.update(rel);
                     s.getTransaction().commit();
@@ -1182,7 +1182,7 @@ public class ActionController extends HttpServlet {
             try {
                 SessionFactory sf = new Configuration().configure().buildSessionFactory();
                 Session s = sf.openSession();
-                Frnd_requestDao r1 = new Frnd_requestDao();
+                FrndRequest r1 = new FrndRequest();
                 r1.setReq_date(date);
                 r1.setReq_from(uid);
                 r1.setReq_to(to);
@@ -1307,7 +1307,7 @@ public class ActionController extends HttpServlet {
 
                 Session s = sf.openSession();
 
-                CommentDao ce = new CommentDao();
+                Comment ce = new Comment();
                 ce.setCmnt(comment);
 
                 s.save(ce);

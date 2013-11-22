@@ -7,7 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.rbnelite.udyogvishwa.dao.LoginDao;
+import com.rbnelite.udyogvishwa.model.LoginDao;
 
 public class LoginImpl {
 	public void updateLogin(String UserName, String Password) {

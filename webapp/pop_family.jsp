@@ -1,4 +1,4 @@
-<%@page import="com.rbnelite.udyogvishwa.dao.FamilyDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.Family"%>
 <%@page import="java.util.List"%>
 
 <%@page import="org.hibernate.Query"%>
@@ -43,7 +43,7 @@
              
                for (int i = 0; i < allUsers.size(); i++)
                {  
-               FamilyDao fam = (FamilyDao) allUsers.get(i);        
+               Family fam = (Family) allUsers.get(i);        
               fam_value=fam.getFam_values();
               fam_type=fam.getFam_type();
               fam_status=fam.getFam_status();

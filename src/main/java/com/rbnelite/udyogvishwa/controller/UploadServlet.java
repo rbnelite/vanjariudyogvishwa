@@ -20,8 +20,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.rbnelite.udyogvishwa.dao.NotificationDao;
-import com.rbnelite.udyogvishwa.dao.PhotoUploadDao;
+import com.rbnelite.udyogvishwa.model.NotificationDao;
+import com.rbnelite.udyogvishwa.model.PhotoUploadDao;
 
 public class UploadServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

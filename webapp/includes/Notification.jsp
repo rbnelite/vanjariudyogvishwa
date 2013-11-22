@@ -4,7 +4,7 @@
     Author     : RBNElite
 --%>
 
-<%@page import="com.rbnelite.udyogvishwa.dao.NotificationDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.NotificationDao"%>
 <%@page import="org.hibernate.Query"%>
 <%@page import="java.util.List"%>
 <%@page import="org.hibernate.Session"%>

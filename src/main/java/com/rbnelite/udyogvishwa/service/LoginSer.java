@@ -7,7 +7,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-import com.rbnelite.udyogvishwa.dao.LoginDao;
+import com.rbnelite.udyogvishwa.model.LoginDao;
 
 public class LoginSer {
      

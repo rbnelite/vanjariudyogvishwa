@@ -1,4 +1,4 @@
-<%@page import="com.rbnelite.udyogvishwa.dao.LifestyleDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.LifestyleDao"%>
 <%@page import="java.util.List"%>
 <%@page import="org.hibernate.Query"%>
 <%@page import="org.hibernate.Session"%>

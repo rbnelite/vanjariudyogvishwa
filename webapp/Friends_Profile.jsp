@@ -1,24 +1,24 @@
 <%@page import="com.rbnelite.udyogvishwa.service.ProfileImage"%>
 <%@page import="org.hibernate.SQLQuery"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.RegistrationDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.StatusUpdateDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.Frnd_requestDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.RegistrationDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.StatusUpdateDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.FrndRequest"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="org.hibernate.type.AdaptedImmutableType"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.PhotoUploadDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.FriendshipDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.OtherDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.HobbiesDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.LifestyleDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.ReligionDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.FamilyDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.AstroDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.ContactDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.EducationDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.PhotoUploadDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.Friendship"%>
+<%@page import="com.rbnelite.udyogvishwa.model.OtherDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.HobbiesDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.LifestyleDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.ReligionDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.Family"%>
+<%@page import="com.rbnelite.udyogvishwa.model.Astro"%>
+<%@page import="com.rbnelite.udyogvishwa.model.Contact"%>
+<%@page import="com.rbnelite.udyogvishwa.model.Education"%>
 <%@page import="com.rbnelite.udyogvishwa.service.GroupSer"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.ProductDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.ProductDao"%>
 <%@page import="java.security.acl.Group"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.ProfileImageDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.ProfileImageDao"%>
 <%@page import="com.rbnelite.udyogvishwa.service.ProfileSer"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="com.sun.org.apache.bcel.internal.generic.IADD"%>
@@ -473,7 +473,7 @@ function validate()
              
              for (int i = 0; i < allUsers.size(); i++)
                {  
-               FriendshipDao frnd_pht = (FriendshipDao) allUsers.get(i);        
+               Friendship frnd_pht = (Friendship) allUsers.get(i);        
               frnd=frnd_pht.getWho_frd();
         
              Query queryResult131 = s13.createQuery("from ProfileImageDao where user_mail='"+frnd+"'");

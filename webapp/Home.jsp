@@ -6,15 +6,15 @@
 <%@page import="com.rbnelite.udyogvishwa.service.LoginSer"%>
 <%@page import="com.rbnelite.udyogvishwa.service.ProfileImage"%>
 <%@page import="java.util.Iterator"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.CommentDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.RegistrationDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.StatusUpdateDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.I_needDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.CreateEventDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.Frnd_requestDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.Comment"%>
+<%@page import="com.rbnelite.udyogvishwa.model.RegistrationDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.StatusUpdateDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.I_needDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.CreateEvent"%>
+<%@page import="com.rbnelite.udyogvishwa.model.FrndRequest"%>
 <%@page import="com.rbnelite.udyogvishwa.service.HomeSer"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.ProfileImageDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.LoginDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.ProfileImageDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.LoginDao"%>
 <%@page import="org.hibernate.SQLQuery"%>
 <%@page  import="com.rbnelite.udyogvishwa.controller.ActionController" %>
 <%@page import="sun.security.util.Password"%>
@@ -404,8 +404,8 @@ modalWin.ShowMessage(msg,200,400,'User Information',null,null);
    List  allUsers1 = queryResult3.list();
    for ( m = 0; m < allUsers1.size(); m++)
      {
-       CommentDao status1 =(CommentDao) allUsers1.get(m); 
-       comment_whom=status1.getCmt_whom();
+       Comment status1 =(Comment) allUsers1.get(m); 
+       comment_whom=status1.getCmtWhom();
        comment=status1.getCmnt();
     %>
         <div id="show_comment">

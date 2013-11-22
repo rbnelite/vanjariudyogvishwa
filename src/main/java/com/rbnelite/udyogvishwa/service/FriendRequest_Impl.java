@@ -7,7 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.rbnelite.udyogvishwa.dao.Frnd_requestDao;
+import com.rbnelite.udyogvishwa.model.FrndRequest;
 
 public class FriendRequest_Impl 
 
@@ -26,7 +26,7 @@ public class FriendRequest_Impl
                 allUsers = queryResult.list();   
                 for (int i = 0; i < allUsers.size(); i++) 
                 {  
-                Frnd_requestDao frd = (Frnd_requestDao) allUsers.get(i);   
+                FrndRequest frd = (FrndRequest) allUsers.get(i);   
                 frd.setReq_status(status); 
                  s.beginTransaction();
                 s.update(frd);  

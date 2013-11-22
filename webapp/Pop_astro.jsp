@@ -1,4 +1,4 @@
-<%@page import="com.rbnelite.udyogvishwa.dao.AstroDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.Astro"%>
 <%@page import="java.util.List"%>
 
 <%@page import="org.hibernate.Query"%>
@@ -43,7 +43,7 @@
              
                for (int i = 0; i < allUsers.size(); i++)
                {  
-               AstroDao astro = (AstroDao) allUsers.get(i);        
+               Astro astro = (Astro) allUsers.get(i);        
               country=astro.getCountry();
               city=astro.getCity();
               zodiac=astro.getZodiac();

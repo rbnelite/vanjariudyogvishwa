@@ -14,7 +14,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.rbnelite.udyogvishwa.dao.CommentDao;
+import com.rbnelite.udyogvishwa.model.Comment;
 
 /**
  *
@@ -91,10 +91,10 @@ public class CommentController extends HttpServlet {
             {
                 SessionFactory sf=new Configuration().configure().buildSessionFactory();
                 Session s=sf.openSession();
-                CommentDao ce=new CommentDao();
+                Comment ce=new Comment();
                 ce.setCmnt(comment);
-                ce.setCmt_whom(cmt_whom);
-                ce.setStatus_id(id);
+                ce.setCmtWhom(cmt_whom);
+                ce.setStatusId(id);
                 //ce.setCmt_date(cmt_date);
                 s.beginTransaction();
                 s.save(ce);

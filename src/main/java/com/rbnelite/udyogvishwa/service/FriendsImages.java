@@ -6,7 +6,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-import com.rbnelite.udyogvishwa.dao.ProfileImageDao;
+import com.rbnelite.udyogvishwa.model.ProfileImageDao;
 
 public class FriendsImages {
 
@@ -22,7 +22,7 @@ public class FriendsImages {
 		s5.beginTransaction();
 		List allUsers5;
 		Query queryResult5 = s5
-				.createQuery("from ProfileImageDao where user_mail='"
+				.createQuery("from ProfileImage where user_mail='"
 						+ user_mail + "'");
 		allUsers5 = queryResult5.list();
 

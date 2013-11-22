@@ -1,4 +1,4 @@
-<%@page import="com.rbnelite.udyogvishwa.dao.ContactDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.Contact"%>
 <%@page import="java.util.List"%>
 <%@page import="org.hibernate.Query"%>
 <%@page import="org.hibernate.Session"%>
@@ -42,7 +42,7 @@
              
                for (int i = 0; i < allUsers.size(); i++)
                {  
-               ContactDao con = (ContactDao) allUsers.get(i);        
+               Contact con = (Contact) allUsers.get(i);        
               home=con.getHome_addr();
               office=con.getOff_addr();
               //residential=con.getRes_addr();

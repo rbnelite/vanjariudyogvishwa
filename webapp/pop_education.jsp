@@ -1,4 +1,4 @@
-<%@page import="com.rbnelite.udyogvishwa.dao.EducationDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.Education"%>
 <%@page import="org.hibernate.cfg.Configuration"%>
 <%@page import="org.hibernate.SessionFactory"%>
 <%@page import="org.hibernate.Session"%>
@@ -44,7 +44,7 @@
                
                for (int i = 0; i < allUsers.size(); i++)
                {  
-               EducationDao edu = (EducationDao) allUsers.get(i);        
+               Education edu = (Education) allUsers.get(i);        
                Pg_Clg=edu.getPg_clg(); 
                Pg_degree=edu.getPg_degree();
                clg=edu.getClg();

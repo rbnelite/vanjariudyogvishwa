@@ -1,6 +1,6 @@
 
-<%@page import="com.rbnelite.udyogvishwa.dao.RegistrationDao"%>
-<%@page import="com.rbnelite.udyogvishwa.dao.Frnd_requestDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.RegistrationDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.FrndRequest"%>
 <%@page import="org.hibernate.SQLQuery"%>
 <%@page import="org.hibernate.Query"%>
 <%@page import="java.util.List"%>
@@ -43,7 +43,7 @@ www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
               allUsers7 = q3.list(); 
               for (int k = 0; k < allUsers7.size(); k++)
               {  
-              Frnd_requestDao tr_f = (Frnd_requestDao)allUsers7.get(k);  
+              FrndRequest tr_f = (FrndRequest)allUsers7.get(k);  
               String e_id=tr_f.getReq_from();
                 Query q2=s5.createQuery("FROM RegistrationDao R  WHERE R.emailId='"+e_id+"'");
                 allUsers6 = q2.list();

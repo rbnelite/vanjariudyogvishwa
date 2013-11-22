@@ -20,7 +20,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.rbnelite.udyogvishwa.dao.ProfileImageDao;
+import com.rbnelite.udyogvishwa.model.ProfileImageDao;
 
 public class ProfileImageServlet extends HttpServlet {
 

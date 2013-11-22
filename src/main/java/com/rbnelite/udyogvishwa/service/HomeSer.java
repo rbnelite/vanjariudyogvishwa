@@ -9,8 +9,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.rbnelite.udyogvishwa.dao.Frnd_requestDao;
-import com.rbnelite.udyogvishwa.dao.NotificationDao;
+import com.rbnelite.udyogvishwa.model.FrndRequest;
+import com.rbnelite.udyogvishwa.model.NotificationDao;
 
 public class HomeSer {
 
@@ -83,7 +83,7 @@ public class HomeSer {
 						+ "' and req_status='N'");
 		allUsers16 = queryResult16.list();
 		for (int i = 0; i < allUsers16.size(); i++) {
-			Frnd_requestDao fnt = (Frnd_requestDao) allUsers16.get(i);
+			FrndRequest fnt = (FrndRequest) allUsers16.get(i);
 			act = fnt.getFrnd_req_id();
 			cnttt = cnttt + 1;
 

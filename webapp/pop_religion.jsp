@@ -1,4 +1,4 @@
-<%@page import="com.rbnelite.udyogvishwa.dao.ReligionDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.ReligionDao"%>
 <%@page import="java.util.List"%>
 <%@page import="org.hibernate.Query"%>
 <%@page import="org.hibernate.cfg.Configuration"%>

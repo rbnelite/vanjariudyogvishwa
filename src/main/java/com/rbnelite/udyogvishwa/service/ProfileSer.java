@@ -7,16 +7,16 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-import com.rbnelite.udyogvishwa.dao.AstroDao;
-import com.rbnelite.udyogvishwa.dao.ContactDao;
-import com.rbnelite.udyogvishwa.dao.EducationDao;
-import com.rbnelite.udyogvishwa.dao.FamilyDao;
-import com.rbnelite.udyogvishwa.dao.HobbiesDao;
-import com.rbnelite.udyogvishwa.dao.LifestyleDao;
-import com.rbnelite.udyogvishwa.dao.OtherDao;
-import com.rbnelite.udyogvishwa.dao.ProductDao;
-import com.rbnelite.udyogvishwa.dao.RegistrationDao;
-import com.rbnelite.udyogvishwa.dao.ReligionDao;
+import com.rbnelite.udyogvishwa.model.Astro;
+import com.rbnelite.udyogvishwa.model.Contact;
+import com.rbnelite.udyogvishwa.model.Education;
+import com.rbnelite.udyogvishwa.model.Family;
+import com.rbnelite.udyogvishwa.model.HobbiesDao;
+import com.rbnelite.udyogvishwa.model.LifestyleDao;
+import com.rbnelite.udyogvishwa.model.OtherDao;
+import com.rbnelite.udyogvishwa.model.ProductDao;
+import com.rbnelite.udyogvishwa.model.RegistrationDao;
+import com.rbnelite.udyogvishwa.model.ReligionDao;
 
 public class ProfileSer {
     String fname;
@@ -70,7 +70,7 @@ public class ProfileSer {
                
                for (int i = 0; i < allUsers.size(); i++)
                {  
-               EducationDao edu = (EducationDao) allUsers.get(i);        
+               Education edu = (Education) allUsers.get(i);        
                Pg_Clg=edu.getPg_clg(); 
                Pg_degree=edu.getPg_degree();
                clg=edu.getClg();
@@ -105,12 +105,12 @@ public class ProfileSer {
               s4.beginTransaction();  
               List allUsers;
               ArrayList list=new ArrayList();
-              Query queryResult5 = s4.createQuery("from ContactDao where user_mail='"+user_mail+"'");  
+              Query queryResult5 = s4.createQuery("from Contact where user_mail='"+user_mail+"'");  
               allUsers = queryResult5.list();
              
                for (int i = 0; i < allUsers.size(); i++)
                {  
-               ContactDao con = (ContactDao) allUsers.get(i);        
+               Contact con = (Contact) allUsers.get(i);        
               home=con.getHome_addr();
               office=con.getOff_addr();
               Telephone=con.getTelephone();
@@ -137,12 +137,12 @@ public class ProfileSer {
                Session s3=sf3.openSession();
               s3.beginTransaction();  
              ArrayList list=new ArrayList();
-              Query queryResult4 = s3.createQuery("from AstroDao where user_mail='"+user_mail+"'");  
+              Query queryResult4 = s3.createQuery("from Astro where user_mail='"+user_mail+"'");  
               List allUsers = queryResult4.list();
              
               for (int i = 0; i < allUsers.size(); i++)
                {  
-               AstroDao astro = (AstroDao) allUsers.get(i);        
+               Astro astro = (Astro) allUsers.get(i);        
              country=astro.getCountry();
               city=astro.getCity();
               zodiac=astro.getZodiac();
@@ -167,12 +167,12 @@ public class ProfileSer {
               Session s5=sf5.openSession();
               s5.beginTransaction();  
              
-              Query queryResult6 = s5.createQuery("from FamilyDao where user_mail='"+user_mail+"'");  
+              Query queryResult6 = s5.createQuery("from Family where user_mail='"+user_mail+"'");  
                List allUsers = queryResult6.list();
              
               for (int i = 0; i < allUsers.size(); i++)
               {  
-               FamilyDao fam = (FamilyDao) allUsers.get(i);        
+               Family fam = (Family) allUsers.get(i);        
               fam_value=fam.getFam_values();
               fam_type=fam.getFam_type();
               fam_status=fam.getFam_status();

@@ -19,7 +19,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.rbnelite.udyogvishwa.dao.ProductImageDao;
+import com.rbnelite.udyogvishwa.model.ProductImageDao;
 
 public class UploadProductImage extends HttpServlet {
 	private static final long serialVersionUID = 1L;

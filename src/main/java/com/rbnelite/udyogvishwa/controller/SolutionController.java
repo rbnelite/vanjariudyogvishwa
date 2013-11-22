@@ -18,7 +18,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.rbnelite.udyogvishwa.dao.SolutionDao;
+import com.rbnelite.udyogvishwa.model.SolutionDao;
 
 /**
  *
