@@ -1,16 +1,24 @@
 package com.rbnelite.udyogvishwa.controller;
 
+import javax.annotation.Resource;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.rbnelite.udyogvishwa.service.HelloWorldService;
 
 @Controller
 public class HelloController {
 
+	@Resource
+	HelloWorldService helloWorldService;
+	
 	@RequestMapping(value = "/hello", method=RequestMethod.GET)
-	public String hello(Model model) {
+	public String hello(ModelMap model) {
+		model.addAttribute("message", helloWorldService.getMessage());
 		return "hello";
 	}
 	

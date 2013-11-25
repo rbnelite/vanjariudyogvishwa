@@ -3,19 +3,19 @@
 <%@page import="org.hibernate.SQLQuery"%>
 <%@page import="com.rbnelite.udyogvishwa.model.RegistrationDao"%>
 <%@page import="com.rbnelite.udyogvishwa.model.StatusUpdateDao"%>
-<%@page import="com.rbnelite.udyogvishwa.model.Frnd_requestDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.FrndRequest"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="org.hibernate.type.AdaptedImmutableType"%>
 <%@page import="com.rbnelite.udyogvishwa.model.PhotoUploadDao"%>
-<%@page import="com.rbnelite.udyogvishwa.model.FriendshipDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.Friendship"%>
 <%@page import="com.rbnelite.udyogvishwa.model.OtherDao"%>
 <%@page import="com.rbnelite.udyogvishwa.model.HobbiesDao"%>
 <%@page import="com.rbnelite.udyogvishwa.model.LifestyleDao"%>
 <%@page import="com.rbnelite.udyogvishwa.model.ReligionDao"%>
-<%@page import="com.rbnelite.udyogvishwa.model.FamilyDao"%>
-<%@page import="com.rbnelite.udyogvishwa.model.AstroDao"%>
-<%@page import="com.rbnelite.udyogvishwa.model.ContactDao"%>
-<%@page import="com.rbnelite.udyogvishwa.model.EducationDao"%>
+<%@page import="com.rbnelite.udyogvishwa.model.Family"%>
+<%@page import="com.rbnelite.udyogvishwa.model.Astro"%>
+<%@page import="com.rbnelite.udyogvishwa.model.Contact"%>
+<%@page import="com.rbnelite.udyogvishwa.model.Education"%>
 <%@page import="com.rbnelite.udyogvishwa.service.GroupSer"%>
 <%@page import="com.rbnelite.udyogvishwa.model.ProductDao"%>
 <%@page import="java.security.acl.Group"%>
@@ -124,7 +124,7 @@ modalWin.ShowMessage(msg,200,400,'User Information',null,null);
                                     allUsers16 = queryResult16.list();
 
                                     for (int i = 0; i < allUsers16.size(); i++) {
-                                        Frnd_requestDao fnt = (Frnd_requestDao) allUsers16.get(i);
+                                        FrndRequest fnt = (FrndRequest) allUsers16.get(i);
                                         act = fnt.getFrnd_req_id();
                                         cnttt = cnttt + 1;
                                     }
@@ -557,7 +557,7 @@ modalWin.ShowMessage(msg,200,400,'User Information',null,null);
                             List allUsers = queryResult13.list();
 
                             for (int i = 0; i < allUsers.size(); i++) {
-                                FriendshipDao frnd_pht = (FriendshipDao) allUsers.get(i);
+                                Friendship frnd_pht = (Friendship) allUsers.get(i);
                                 frnd = frnd_pht.getWho_frd();
 
                                 Query queryResult131 = s13.createQuery("from ProfileImageDao where user_mail='" + frnd + "'");
